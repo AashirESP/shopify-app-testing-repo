@@ -3,6 +3,7 @@ const Koa = require('koa');
 const { default: createShopifyAuth } = require('@shopify/koa-shopify-auth');
 const session = require('koa-session');
 
+
 const { SHOPIFY_API_KEY, SHOPIFY_API_SECRET, SCOPES, HOST } = process.env;
 
 const app = new Koa();

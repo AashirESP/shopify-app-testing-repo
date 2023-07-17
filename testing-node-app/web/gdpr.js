@@ -11,7 +11,7 @@ export default {
    * https://shopify.dev/docs/apps/webhooks/configuration/mandatory-webhooks#customers-data_request
    */
   CUSTOMERS_DATA_REQUEST: {
-    deliveryMethod: DeliveryMethod.Http,
+    deliveryMethod: DeliveryMethod.HttpWebhook,
     callbackUrl: "/api/webhooks",
     callback: async (topic, shop, body, webhookId) => {
       const payload = JSON.parse(body);
@@ -43,7 +43,7 @@ export default {
    * https://shopify.dev/docs/apps/webhooks/configuration/mandatory-webhooks#customers-redact
    */
   CUSTOMERS_REDACT: {
-    deliveryMethod: DeliveryMethod.Http,
+    deliveryMethod: DeliveryMethod.HttpWebhook,
     callbackUrl: "/api/webhooks",
     callback: async (topic, shop, body, webhookId) => {
       const payload = JSON.parse(body);
@@ -72,7 +72,7 @@ export default {
    * https://shopify.dev/docs/apps/webhooks/configuration/mandatory-webhooks#shop-redact
    */
   SHOP_REDACT: {
-    deliveryMethod: DeliveryMethod.Http,
+    deliveryMethod: DeliveryMethod.HttpWebhook,
     callbackUrl: "/api/webhooks",
     callback: async (topic, shop, body, webhookId) => {
       const payload = JSON.parse(body);
