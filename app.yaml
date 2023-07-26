@@ -1,0 +1,18 @@
+runtime: nodejs18
+env_variables:
+  PUBSUB_CREDENTIALS: '{
+    "type": "service_account",
+    "project_id": "shopify-app-deployment",
+    "private_key_id": "74fc6f8b07bd67ab3fe9eccfa4ef773580d5cddc",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDbjAtc5Ogv48h8\nusM7ogIHyWSk/BFaiPL4r1DIDchEhnONWUD1r71waYZhsTGXh5tTFHLfmcUTlCgS\nwYbrlIpR+eNQvldCGv+6bnpillGHF6YZVg9UPf+ZLYtLkmIh1ITSoX00Hvw/1CHz\nb5yy/GQaG2DiEiFdwj/b1LZiMxfFPtowH9pH+ZpS0EEqVVzLNgIsKcbQgBObdIc7\nKT0ZGEEC7r4aajlFES79tvqLQZCrGKIyMcWCUot2K9Myej6tZSdczEqx9UARstvI\nFpYoVGi5r5bJTbslyT6/tTLBlXLLGXvvRf+r+GW+Z3RuudkP55a4HGplztu955B0\n1odAiHWVAgMBAAECggEAT3KqWf9sFohzcM+U/uttmKvEg//Dt+N/KYcn0H1MT5/o\nCOqXm1DxWNCXFJsuuwsTpkjsGQZoTuF6bu8hh/bE501qeTmoEf/7Mtfv6eVDs4NX\nVCvUeEPHTwMwOTTL1jo1ppNR356m4eI+Nv3Y0tyKzPfDY4v0Dx3QRhj/tyGOJI4i\nToUUKnJb14nM63GlG1Nv+aP3i9grrVO5WVOr8VI1xlc7tPrUbfU6oDU1RTMkKxFu\nUxHfn2Nq16Aw9AnS7B7t9bl4xqUgnugP4s8FCUx3HWT0JRFjqsBr7ppk77DxtjjA\nmS1dtHTBg8Tv8EM5VeWraEed1exDgz9AjjE0EZJ2sQKBgQD5sPLl7oCeMGwNYfvX\nprg3MFSGhiEqMpy8kF1MJTQ9Dk4XTljbkJpYXJ6SonFJ/S6hMyRL02reAitvMj/o\naTRB3tKlOYZK8ZDNKPvv1BhhwvkMBEWfo4e+1NaDPTz2FF3l/igROM4vMGXHNOYY\njdFO2fNBGS1haMw52xz6CCG99wKBgQDhGB4He3gjy0jSnpzI68AI7pP/OVGTNfx2\nt/RtmIDuv9qH1iTd+iKMpomaAzvcIuh6RtrXlLTgabxWI25KdTiENLV8MP9D1oIC\nwoWEFfTHmiO4u2Lx+G6XX5jUSCLCUzmXN2OLuegLMuAWb87mGo7Rikb5ZhU4tTC2\nnKRTuJF10wKBgQCAp1QAdWuAFqMWIi6JZzXz+csTpXjhLULlRd1Mpr7L1tsV1yCh\nwVhFvzNViq2k2fd0x80j5MNjsOqAWPvk3JA4gH848vLnGqDplPx7DmWhubxpHKpj\nHveKtE/zP1Jx2PyozNQIS6SxW9aVVgRZEnmOj25vVHG1hzHzfZromdgI8QKBgQCk\nbpzJNH4AD+mDytCXyfg/ziEZCcM4ufBSvXD2erh9MHOwVVQbQDXq72GHu6MH3gxb\n/tSxNXWoljU566oPBHCjy2lkbtqasOHKqFUmt29YPJapxWGzh5sqQ3B+aq/Rq0Bf\n4dt7X/RN8f1XBphq6a25Dr1oRRVtlpceX3F/o03HdwKBgQCumonHyveopg2Bnu4t\n+N/dHZwSh6i1kGksZZBW2mH7eFutkT1wvYDv5ZIDdTUoEQZxQ9fHzRRliH5q7/Wu\n7dn4p1c/12r4XK9lHoSFAkT7/M6oS+phPAfolQkaeL3hy3/V/ZTo/7VnDhqdVGaA\nEgPvn7qtXzBDYmOeMgxt2AU5jw==\n-----END PRIVATE KEY-----\n",
+    "client_email": "delivery-shopify-pubsub-webhoo@shopify-app-deployment.iam.gserviceaccount.com",
+    "client_id": "113920689922571189489",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/delivery-shopify-pubsub-webhoo%40shopify-app-deployment.iam.gserviceaccount.com"
+  }'
+  PUBSUB_TOPIC: projects/shopify-app-deployment/topics/shopify-app-deployment-topic
+  PUBSUB_SUBSCRIPTION: projects/shopify-app-deployment/subscriptions/shopify-app-deployment-topic-subscription
+entrypoint: node index.js
+instance_class: F1

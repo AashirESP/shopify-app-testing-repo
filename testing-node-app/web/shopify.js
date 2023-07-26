@@ -3,7 +3,7 @@ import { join } from "path";
 
 import { QRCodesDB } from "./qr-codes-db.js";
 
-import { BillingInterval, LATEST_API_VERSION } from "@shopify/shopify-api";
+import { BillingInterval, LATEST_API_VERSION, DeliveryMethod } from "@shopify/shopify-api";
 import { shopifyApp } from "@shopify/shopify-app-express";
 import { SQLiteSessionStorage } from "@shopify/shopify-app-session-storage-sqlite";
 import { restResources } from "@shopify/shopify-api/rest/admin/2023-04";
@@ -29,7 +29,8 @@ const shopify = shopifyApp({
     callbackPath: "/api/auth/callback",
   },
   webhooks: {
-    path: "/api/webhooks",
+    path: "pubsub://shopify-app-deployment:shopify-app-deployment-topic",
+    deliveryMethod: DeliveryMethod.PubSub
   },
   sessionStorage: new SQLiteSessionStorage(database),
 });

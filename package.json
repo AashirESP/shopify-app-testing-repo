@@ -9,9 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/pubsub": "^3.7.2",
     "@shopify/koa-shopify-auth": "^5.0.3",
+    "@shopify/shopify-api": "^7.5.0",
     "dotenv": "^16.3.1",
     "koa": "^2.14.2",
-    "koa-session": "^6.4.0"
+    "koa-session": "^6.4.0",
+    "shopify": "^0.1.0",
+    "shopify-api": "^0.2.3"
   }
 }
